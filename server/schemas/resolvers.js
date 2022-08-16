@@ -1,6 +1,7 @@
 const { User, Thought } = require('../models');
 
 const resolvers = {
+  //R of CRUD operations for graphql 
   Query: {
     users: async () => {
       return User.find()
@@ -21,6 +22,16 @@ const resolvers = {
     thought: async (parent, { _id }) => {
       return Thought.findOne({ _id });
     }
+  },
+  //CUD of CRUD for graphql
+  Mutation: {
+addUser: async (parent, args) => {
+const user = await User.create(args);
+return user;
+}, 
+login: async(parent, args) => {
+// const login = await User.post
+}
   }
 };
 

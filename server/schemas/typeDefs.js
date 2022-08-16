@@ -1,5 +1,6 @@
 const { gql } = require('apollo-server-express');
 
+// ! after param indicates required field in graphql
 const typeDefs = gql`
   type User {
     _id: ID
@@ -31,6 +32,11 @@ const typeDefs = gql`
     user(username: String!): User
     thoughts(username: String): [Thought]
     thought(_id: ID!): Thought
+  }
+
+  type Mutation {
+    login(email: String!, password: String!): User
+    addUser(username: String!, email: String!, password: String!): User
   }
 `;
 
