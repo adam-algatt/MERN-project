@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-      "start": "node server/server.js",
-      "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-      "install": "cd server && npm i && cd ../client && npm i",
-      "seed": "cd server && npm run seed"
+    "start": "node server/server.js",
+    "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +22,9 @@
     "url": "https://github.com/adam-algatt/MERN-project/issues"
   },
   "homepage": "https://github.com/adam-algatt/MERN-project#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0"
+  }
 }
